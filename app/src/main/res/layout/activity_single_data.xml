@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screen.EmployeeDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/collapseToolbar"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back1" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbarDetail"
+                app:layout_collapseMode="pin"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageBack"
+                    android:layout_margin="10dp"
+                    app:layout_collapseMode="pin"
+                    android:src="@drawable/ic_arrow_back_black_24dp"/>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nestedView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:id="@+id/linearlayoutDetail"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleEname"
+                android:text="@string/name"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/detailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                android:id="@+id/titleEcontact"
+                android:textSize="20sp"
+                android:layout_below="@+id/detailName"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/detailContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="5dp"
+                android:text="Contact"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:id="@+id/titleEemail"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailEmail"
+                android:textAlignment="viewStart"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:text="@string/email"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:id="@+id/titleEaddress"
+                android:layout_below="@+id/detailEmail"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailAddress"
+                android:layout_alignStart="@+id/detailName"
+                android:layout_below="@+id/detailEmail"
+                android:layout_toRightOf="@+id/titleEaddress"
+                android:textAlignment="viewStart"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:text="Address"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:id="@+id/titleEgender"
+                android:layout_below="@+id/detailAddress"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailGender"
+                android:layout_alignStart="@+id/detailName"
+                android:textAlignment="viewStart"
+                android:layout_toRightOf="@+id/titleEgender"
+                android:layout_below="@+id/detailAddress"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:text="Gender"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salary"
+                android:id="@+id/titleEsalary"
+                android:layout_below="@+id/detailGender"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailSalary"
+                android:layout_alignStart="@+id/detailName"
+                android:layout_below="@+id/detailGender"
+                android:layout_toRightOf="@+id/titleEsalary"
+                android:textAlignment="viewStart"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:text="Salary"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/designation"
+                android:id="@+id/titleEdesignation"
+                android:layout_below="@+id/detailSalary"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailDesignation"
+                android:layout_alignStart="@+id/detailName"
+                android:layout_below="@+id/detailSalary"
+                android:layout_toRightOf="@+id/titleEdesignation"
+                android:textAlignment="viewStart"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:text="Designation"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:id="@+id/titleEabout"
+                android:layout_below="@+id/detailDesignation"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/detailAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailDesignation"
+                android:layout_toRightOf="@+id/titleEabout"
+                android:padding="5dp"
+                android:layout_alignStart="@+id/detailName"
+                android:text="About"
+                android:textAlignment="viewStart"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/detailImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_margin="10dp"
+        app:layout_anchorGravity="center|bottom"
+        app:layout_anchor="@id/appbarLayout"
+        android:onClick="onImageClick"
+        android:scaleType="centerCrop"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

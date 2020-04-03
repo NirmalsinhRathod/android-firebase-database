@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screen.SplashActivity"
+    android:gravity="center"
+    android:background="@drawable/e5323d1c08ce5a9991240b481ba34c11">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashImage"
+        android:src="@drawable/creole"/>
+</LinearLayout>

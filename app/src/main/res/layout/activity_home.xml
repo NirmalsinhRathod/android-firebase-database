@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screen.HomeActivity">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:id="@+id/toolbarEmployee"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/logout"
+                    android:src="@drawable/ic_power_settings_new_black_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employees"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"/>
+        </androidx.appcompat.widget.Toolbar>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/selectAll"
+            android:layout_below="@+id/toolbarEmployee"
+            android:text="Select All"
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/deleteData"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:visibility="gone"
+            android:layout_below="@id/toolbarEmployee"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView1"
+            android:layout_below="@+id/selectAll">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/employeeRecycleview"
+                            android:paddingBottom="100dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+        </ScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNodata"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:layout_centerInParent="true"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_alignBottom="@+id/scrollView1"
+            android:layout_alignRight="@+id/scrollView1"
+            android:src="@drawable/ic_add_black_24dp"
+            app:maxImageSize="60dp" />
+
+
+</RelativeLayout>

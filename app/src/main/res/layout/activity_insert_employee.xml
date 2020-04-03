@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Screen.InsertEmployeeActivity"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:id="@+id/toolbarInsert"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backButtonInsert"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Employee"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="30dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleProfileImage"
+                    android:layout_width="96dp"
+                    android:layout_height="92dp"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerCrop" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editName"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/custom_edit_drawable"
+                    android:hint="@string/name"
+                    android:textColorHint="@color/colorBlack"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editEmail"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/custom_edit_drawable"
+                    android:hint="@string/email"
+                    android:textColorHint="@color/colorBlack"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editContact"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/custom_edit_drawable"
+                    android:hint="@string/contact"
+                    android:textColorHint="@color/colorBlack"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_desingation"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_edit_drawable"/>
+                  <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editAddress"
+                    android:textSize="15dp"
+                    android:lines="3"
+                    android:ems="10"
+                    android:maxLines="3"
+                    android:gravity="top"
+                    android:inputType="text|textMultiLine"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/custom_edit_drawable"
+                    android:hint="@string/address"
+                    android:textColorHint="@color/colorBlack"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Employee Gender:"
+                        android:textSize="15dp"
+                        android:padding="5dp"
+                        android:textColor="@color/colorBlack"/>
+                    <RadioGroup
+                        android:id="@+id/radioSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:buttonTint="@color/colorBlack"
+                            android:textColor="@color/colorBlack"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorBlack"
+                            android:buttonTint="@color/colorBlack"
+                            android:text="Female" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editSalary"
+                    android:inputType="numberDecimal"
+                    android:textSize="15dp"
+                    android:maxLength="6"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/custom_edit_drawable"
+                    android:hint="@string/salary"
+                    android:textColorHint="@color/colorBlack"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editAbout"
+                    android:textSize="15dp"
+                    android:lines="3"
+                    android:ems="10"
+                    android:maxLines="3"
+                    android:gravity="top"
+                    android:inputType="text|textMultiLine"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/custom_edit_drawable"
+                    android:hint="@string/about"
+                    android:textColorHint="@color/colorBlack"/>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/submitEmployee"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/button_filled_drawable"
+                    android:text="Submit"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

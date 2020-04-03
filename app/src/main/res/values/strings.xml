@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">EmployeeManagement</string>
+    <string name="textEmailId">Email ID</string>
+    <string name="textPassword">Password</string>
+    <string name="signinButton">Login</string>
+    <string name="facebook_application_id" translatable="false">511235469495422</string>
+    <string name="fb_login_protocol_scheme">fb511235469495422</string>
+    <string name="textSocial">-----Social Login-----</string>
+    <string name="textOr">------OR------</string>
+    <string name="textGoogle">Google</string>
+    <string name="textFacebook">Facebook</string>
+    <string name="textName">Employee Name</string>
+    <string name="textEmail">Employee Email</string>
+    <string name="textGender">Employee Gender</string>
+    <string name="textAddress">Employee Address</string>
+    <string name="textContact">Employee Contact</string>
+    <string name="textSalary">Employee Salary</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="contact">Contact</string>
+    <string name="gender">Gender</string>
+    <string name="userPlaceholderPath">https://ethioexplorer.com/wp-content/uploads/2019/07/Author__Placeholder.png</string>
+    <string name="designation">Designation</string>
+    <string name="about">About</string>
+    <string name="salary">Salary</string>
+    <string name="errorEmptyData">Data Cannot be Empty!</string>
+    <string name="errorPasswordLength">Password Length Should be 5 to 15</string>
+    <string name="errorEmailValidate">Email cannot be Simple Text!</string>
+    <string name="alertEmailTitle">Please Enter Valid EmailID...</string>
+    <string name="errorAuthentication">Firebase Authnetication Failed!</string>
+    <string name="errorGoogleSignIn">Google SignIn Failed!</string>
+    <string name="errorDesignation">Please Select Designation!</string>
+    <string name="textSelectSpinner">Select Designation</string>
+    <string name="textTitleEmployeeDetails">Employee Details</string>
+    <string name="errorSameData">Same Data Cannot be Update!</string>
+    <string name="errorImageUpload">Image Uploadation Failed!</string>
+
+    <string-array name="designationlist">
+        <item name="default">Select Designation</item>
+        <item name="CEO">CEO</item>
+        <item name="COO">COO</item>
+        <item name="TL">Team Leader</item>
+        <item name="HR">HR</item>
+        <item name="BA">Bussiness Analyst</item>
+        <item name="QA">Quality Assurance</item>
+        <item name="Dev">Developer</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
